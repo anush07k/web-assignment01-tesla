@@ -4,6 +4,13 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
 </head>
+<style>
+    .error-message {
+      display: none;
+      color: red;
+      font-size: 14px;
+    }
+  </style>
 <body>
     <header>
         <h1>T.E.S.L.A</h1>
@@ -12,7 +19,9 @@
     <h1>Minimum number of currency notes</h1>
     <div class="container">
         <label for="amount">&#8377;</label>
-        <input type="number" id="amount" placeholder="Enter amount in rupees:">
+        <input type="number" id="amount" placeholder="Enter amount in rupees:" >
+        <p class="error-message" id="error-message">Invalid input! Please enter a positive integer.</p>
+  <button onclick="validateInput()">&rarr;</button>
         <button onclick="calculateNotes()">&rarr;</button>
     </div>
 </div>

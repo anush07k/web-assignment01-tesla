@@ -26,3 +26,15 @@ function calculateNotes() {
     }, 0);
     document.getElementById('totalNotes').textContent = totalNotes;
 }
+
+function validateInput() {
+    var amount = document.getElementById("amount").value;
+    var isValid = /^[1-9]\d*$/.test(amount);
+
+    if (!isValid) {
+      document.getElementById("error-message").style.display = "block";
+      return false;
+    }
+
+    return true;
+  }
